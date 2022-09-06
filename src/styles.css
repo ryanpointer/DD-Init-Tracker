@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+/* Buttons */
+
+
+
+/* Classes */
+
+.center{
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    margin: auto;
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    border: 5px solid blue;
+}
+
+/* Elements */
+
+body{
+  background-color: black;  
+}
+
+h1{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+h2,h3{
+    color: white;
+}
