@@ -23,6 +23,38 @@ export class AddUnitsComponent implements OnInit {
 
   }
 
+  sortUnitsGreedy(){ //bubble sort - small array of data
+
+    for(let i = 0; i < this.units.length; i++){
+      for(let j = 0; j < this.units.length - 1; j++){
+
+        if(this.units[j].init > this.units[j+1].init){
+          let place = this.units[j];
+          this.units[j] = this.units[j+1];
+          this.units[j+1] = place;
+        }
+      }
+    }
+    this.units.reverse();
+  }
+
+
+//// Dev Tools /////////////////////////////////  
+  displayUnitListSize(){
+    let listSizeContainer = document.getElementById('listSize') as HTMLInputElement;
+    listSizeContainer.innerText = "Size of Unit List : " + this.units.length;
+  }
+
+  loadDevToolComponents(){
+
+    this.displayUnitListSize();
+
+  }
+////////////////////////////////////////////////
+
+
+
+
   constructor() { 
     
    }

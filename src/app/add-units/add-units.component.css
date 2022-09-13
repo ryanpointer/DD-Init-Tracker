@@ -11,7 +11,8 @@
 /* Classes */
 
 .add-units{
-    width: 25em;
+    width: auto;
+    margin: auto;
 }
 
 .row-content{
@@ -19,6 +20,11 @@
 }
 
 /* Elements */
+
+h1{
+    font-family: 'Brush Script MT', cursive;
+    color: red;
+}
 
 input{
 
@@ -47,11 +53,17 @@ li{
 
     width: 20em;
 
-    background-color: white;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
 }
 
 ul{
+
+    margin: auto;
+
+    width: 22em;
+    
     background-color: black;
+
 }
