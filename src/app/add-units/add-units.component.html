@@ -1,0 +1,32 @@
+<div class="center">
+
+    <h1>Add Units Here</h1>
+
+</div>
+
+<div class="center content">
+
+    <ul>
+        <li>
+            <input type="name" placeholder="Enter Name of Unit"
+                [(ngModel)]="name" ngRepeat="detail in units">
+
+            <input type="number" placeholder="Enter Initiative of Unit"
+                [(ngModel)]="init" ngRepeat="detail in units">
+
+            <input type="number" placeholder="Enter Dexterity of Unit"
+                [(ngModel)]="dex" ngRepeat="detail in units">    
+
+            <button class="btn_submit" (click)="addUnits()"> Add Unit </button>   
+        </li>
+    </ul>
+
+</div>
+
+<div class="center content">
+    <ul>
+        <li *ngFor="let unit of units">
+            {{unit.name}} || {{unit.init}} || {{unit.dex}}
+        </li>
+    </ul>    
+</div>

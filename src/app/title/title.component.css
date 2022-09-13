@@ -1,0 +1,39 @@
+/* Buttons */
+
+.btn-title{
+    cursor: pointer;
+
+    background-color: black;
+    width: 35em;
+}
+.btn-title:hover{
+    border: 5px solid red;
+}
+.btn-title:active{
+    background-color: gray;
+}
+
+/* Classes */
+
+
+
+/* Elements */
+
+h1{
+    font-family: 'Brush Script MT', cursive;
+    color: red;
+}
+
+img{
+    margin-top: 5em;
+
+    height: 35em;
+    width: 35em;
+
+    object-fit: cover;
+}
+
+p{
+    font-family: 'Brush Script MT', cursive;
+    color: red;
+}

@@ -1,1 +1,17 @@
-<h1 class="center">D&D Initiative Tracker</h1>
+<div *ngIf="hasRoute('app-title')">
+
+    <app-title></app-title>
+
+</div>
+
+<div *ngIf="hasRoute('app-add-units')">
+
+    <app-add-units></app-add-units>
+
+</div>
+
+<div *ngIf="hasRoute('app-unit')">
+
+    <app-unit></app-unit>
+
+</div>

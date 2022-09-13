@@ -1,0 +1,57 @@
+/* Buttons */
+
+.btn_submit{
+    
+    margin: auto;
+    margin-bottom: 1em;
+    width: 7em;
+
+}    
+
+/* Classes */
+
+.add-units{
+    width: 25em;
+}
+
+.row-content{
+    flex-direction: row;
+}
+
+/* Elements */
+
+input{
+
+    margin: auto;
+    margin-top: .5em;
+    margin-bottom: .5em;
+
+    width: 20em;
+
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+label{
+
+    width: 20em;
+
+    color: rgb(0, 0, 0);
+}
+
+li{
+
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    width: 20em;
+
+    background-color: white;
+    color: black;
+
+}
+
+ul{
+    background-color: black;
+}
