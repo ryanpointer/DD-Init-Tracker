@@ -1,4 +1,4 @@
-<div class="center">
+<div class="center content">
 
     <h1>Add Units Here</h1>
 
@@ -6,7 +6,6 @@
 
 <div class="center content">
 
-    <ul>
         <li>
             <input type="name" placeholder="Enter Name of Unit"
                 [(ngModel)]="name" ngRepeat="detail in units">
@@ -19,17 +18,12 @@
 
             <button class="btn_submit" (click)="addUnits()" (click)="loadDevToolComponents()"> Add Unit </button>   
         </li>
-    </ul>
 
-</div><br>
-
-<div class="center content">
-    <button class="btn_submit" (click)="sortUnitsGreedy()">Sort</button>
-    <ul>
+        <button class="btn_submit center" (click)="sortUnitsGreedy()">Sort</button>
+        
         <li *ngFor="let unit of units">
             Name: {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}
-        </li>
-    </ul>    
+        </li>   
 </div>
 
 <div class="dev-tools">

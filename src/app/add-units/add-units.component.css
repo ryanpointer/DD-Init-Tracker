@@ -11,12 +11,16 @@
 /* Classes */
 
 .add-units{
+
     width: auto;
     margin: auto;
+
 }
 
 .row-content{
+
     flex-direction: row;
+
 }
 
 /* Elements */
