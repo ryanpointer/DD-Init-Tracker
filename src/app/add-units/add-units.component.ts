@@ -23,6 +23,8 @@ export class AddUnitsComponent implements OnInit {
 
   }
 
+  // Time Complexity - O(n^2)
+  // Space Complexity - O(1)
   sortUnitsGreedy(){ //bubble sort - small array of data
 
     for(let i = 0; i < this.units.length; i++){
@@ -32,6 +34,12 @@ export class AddUnitsComponent implements OnInit {
           let place = this.units[j];
           this.units[j] = this.units[j+1];
           this.units[j+1] = place;
+        }else if(this.units[j].init == this.units[j+1].init){
+          if(this.units[j].dex > this.units[j+1].dex){
+            let place = this.units[j];
+            this.units[j] = this.units[j+1];
+            this.units[j+1] = place;
+          }
         }
       }
     }

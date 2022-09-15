@@ -1,5 +1,12 @@
 /* Buttons */
 
+.btn_nav{
+    border-radius: 10%;
+}.btn_nav:hover{
+    border: 1px solid red;
+    background-color: grey;
+    cursor: pointer;
+}
 
 
 /* Classes */
