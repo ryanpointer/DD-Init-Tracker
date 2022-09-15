@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UNITLIST } from '../units-list';
 
 @Component({
   selector: 'app-unit',
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unit.component.css']
 })
 export class UnitComponent implements OnInit {
+
+  unitlist = UNITLIST;
+
+
+
+
 
   constructor() { }
 

@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'app-add-units', component: AddUnitsComponent},
   {path: 'app-root', component: AppComponent},
   {path: 'app-title', component: TitleComponent},
-  {path: 'app-units', component: UnitComponent}
+  {path: 'app-unit', component: UnitComponent}
 
 ];
 

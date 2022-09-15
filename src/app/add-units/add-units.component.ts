@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AddUnits } from '../add-units-interface';
+import { UNITLIST } from '../units-list';
 
 @Component({
   selector: 'app-add-units',
@@ -13,13 +14,12 @@ export class AddUnitsComponent implements OnInit {
   dex!: number;
 
 
-  units: any[] = [
-
-  ];
+  units = UNITLIST;
 
   addUnits(){
 
-    this.units.push({ name: this.name, init: this.init, dex: this.dex });
+    //this.units.push({ name: this.name, init: this.init, dex: this.dex });
+    UNITLIST.push({ name: this.name, init: this.init, dex: this.dex });
 
   }
 
@@ -27,30 +27,30 @@ export class AddUnitsComponent implements OnInit {
   // Space Complexity - O(1)
   sortUnitsGreedy(){ //bubble sort - small array of data
 
-    for(let i = 0; i < this.units.length; i++){
-      for(let j = 0; j < this.units.length - 1; j++){
+    for(let i = 0; i < UNITLIST.length; i++){
+      for(let j = 0; j < UNITLIST.length - 1; j++){
 
-        if(this.units[j].init > this.units[j+1].init){
-          let place = this.units[j];
-          this.units[j] = this.units[j+1];
-          this.units[j+1] = place;
-        }else if(this.units[j].init == this.units[j+1].init){
-          if(this.units[j].dex > this.units[j+1].dex){
-            let place = this.units[j];
-            this.units[j] = this.units[j+1];
-            this.units[j+1] = place;
+        if(UNITLIST[j].init > UNITLIST[j+1].init){
+          let place = UNITLIST[j];
+          UNITLIST[j] = UNITLIST[j+1];
+          UNITLIST[j+1] = place;
+        }else if(UNITLIST[j].init == UNITLIST[j+1].init){
+          if(UNITLIST[j].dex > UNITLIST[j+1].dex){
+            let place = UNITLIST[j];
+            UNITLIST[j] = UNITLIST[j+1];
+            UNITLIST[j+1] = place;
           }
         }
       }
     }
-    this.units.reverse();
+    UNITLIST.reverse();
   }
 
 
 //// Dev Tools /////////////////////////////////  
   displayUnitListSize(){
     let listSizeContainer = document.getElementById('listSize') as HTMLInputElement;
-    listSizeContainer.innerText = "Size of Unit List : " + this.units.length;
+    listSizeContainer.innerText = "Size of Unit List : " + UNITLIST.length;
   }
 
   loadDevToolComponents(){
