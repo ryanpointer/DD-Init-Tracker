@@ -1,4 +1,6 @@
 export interface AddUnits{
     name: string,
-    init: number
+    init: number,
+    dex: number;
+    dexMod: number;
 }
