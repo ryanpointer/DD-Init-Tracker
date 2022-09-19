@@ -13,13 +13,18 @@ export class AddUnitsComponent implements OnInit {
   init!: number;
   dex!: number;
 
+  dexMod!: number;
+
 
   units = UNITLIST;
 
   addUnits(){
 
     //this.units.push({ name: this.name, init: this.init, dex: this.dex });
-    UNITLIST.push({ name: this.name, init: this.init, dex: this.dex });
+    this.dexMod = Math.floor((this.dex - 10) / 2);
+    UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, dexMod: this.dexMod});
+
+    this.sortUnitsGreedy();
 
   }
 
@@ -45,23 +50,6 @@ export class AddUnitsComponent implements OnInit {
     }
     UNITLIST.reverse();
   }
-
-
-//// Dev Tools /////////////////////////////////  
-  displayUnitListSize(){
-    let listSizeContainer = document.getElementById('listSize') as HTMLInputElement;
-    listSizeContainer.innerText = "Size of Unit List : " + UNITLIST.length;
-  }
-
-  loadDevToolComponents(){
-
-    this.displayUnitListSize();
-
-  }
-////////////////////////////////////////////////
-
-
-
 
   constructor() { 
     

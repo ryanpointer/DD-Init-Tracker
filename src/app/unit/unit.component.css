@@ -1,0 +1,44 @@
+/* Buttons */
+
+
+/* Classes */
+
+
+.unit-name{
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
+
+/* Elements */
+
+h1{
+    font-family: 'Brush Script MT', cursive;
+    color: red;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: .35em;
+
+    width: 25em;
+    height: 5em;
+    border: 5px solid red;
+
+
+    background-color: grey;
+    color: black;
+}
+
+p{
+    display: flex;
+    flex-direction: row;
+
+    font-size: 1.75em;
+
+    color: black;
+}

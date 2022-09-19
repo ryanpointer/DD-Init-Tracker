@@ -23,20 +23,12 @@
             <input type="number" placeholder="Enter Dexterity of Unit"
                 [(ngModel)]="dex" ngRepeat="detail in units">    
 
-            <button class="btn_submit" (click)="addUnits()" (click)="loadDevToolComponents()"> Add Unit </button>   
+            <button class="btn_submit" (click)="addUnits()"> Add Unit </button>   
         </li>
 
         <button class="btn_submit center" (click)="sortUnitsGreedy()">Sort</button>
         
         <li *ngFor="let unit of units">
-            Name: {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}
+            Name: {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
         </li>   
-</div>
-
-<div class="dev-tools">
-
-    <h2 class="dev-tools-header">Dev Tools and Info</h2>
-
-    <p class="dev-tools-text" id="listSize"></p>
-
 </div>
