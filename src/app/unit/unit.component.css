@@ -1,8 +1,36 @@
 /* Buttons */
 
+.btn_back{
+
+    align-self: center;
+    justify-content: center;
+
+    height: 1em;
+    font-size: 1.75em;
+
+    background-color: black;
+    color: red;
+
+}.btn_back:hover{
+    cursor: pointer;
+    border: 2px solid red;
+}
+
+.btn_nextunit{
+
+    margin-bottom: .25em;
+
+    border: 2px solid white;
+    background-color: black;
+    color: red;
+
+}.btn_nextunit:hover{
+    border: 2px solid red;
+    background-color: black;
+    color: white;
+}
 
 /* Classes */
-
 
 .unit-name{
     justify-content: left;
@@ -18,25 +46,10 @@ h1{
     color: red;
 }
 
-li{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-bottom: .35em;
-
-    width: 25em;
-    height: 5em;
-    border: 5px solid red;
-
-
-    background-color: grey;
-    color: black;
-}
-
 p{
     display: flex;
     flex-direction: row;
+    flex: 5;
 
     font-size: 1.75em;
 

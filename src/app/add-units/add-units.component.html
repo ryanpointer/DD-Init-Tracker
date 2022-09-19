@@ -29,6 +29,6 @@
         <button class="btn_submit center" (click)="sortUnitsGreedy()">Sort</button>
         
         <li *ngFor="let unit of units">
-            Name: {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
+            {{unit.index}}. {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
         </li>   
 </div>

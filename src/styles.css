@@ -46,6 +46,31 @@
     font-size: 15px;
 }
 
+.row-content{
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+.tracked_unit{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: .35em;
+
+    width: 25em;
+    height: 5em;
+    
+    border: 5px solid red;
+
+    background-color: grey;
+    color: black;
+
+}
+
 /* Elements */
 
 body{

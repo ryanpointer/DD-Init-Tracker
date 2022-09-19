@@ -15,6 +15,7 @@ export class AppComponent {
   dex!:number;
 
   dexMod!:number;
+  index!:number;
   
 
   constructor(private router: Router){}
@@ -41,22 +42,25 @@ addDummyUnits(){
   this.init = 15;
   this.dex = 17;
   this.dexMod = Math.floor((this.dex - 10) / 2);
+  this.index = 1;
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
 
   this.name = "Dummy 2";
   this.init = 3;
   this.dex = 12;
   this.dexMod = Math.floor((this.dex - 10) / 2);
+  this.index = 2;
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
 
   this.name = "Dummy 3";
   this.init = 22;
   this.dex = 20;
   this.dexMod = Math.floor((this.dex - 10) / 2);
+  this.index = 3;
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
 
 }
 

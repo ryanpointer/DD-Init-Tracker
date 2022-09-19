@@ -14,6 +14,7 @@ export class AddUnitsComponent implements OnInit {
   dex!: number;
 
   dexMod!: number;
+  index!: number;
 
 
   units = UNITLIST;
@@ -22,7 +23,7 @@ export class AddUnitsComponent implements OnInit {
 
     //this.units.push({ name: this.name, init: this.init, dex: this.dex });
     this.dexMod = Math.floor((this.dex - 10) / 2);
-    UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, dexMod: this.dexMod});
+    UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, dexMod: this.dexMod, index: this.units.length});
 
     this.sortUnitsGreedy();
 
@@ -39,16 +40,26 @@ export class AddUnitsComponent implements OnInit {
           let place = UNITLIST[j];
           UNITLIST[j] = UNITLIST[j+1];
           UNITLIST[j+1] = place;
+          let placeIndex = UNITLIST[j+1].index;
+          UNITLIST[j+1].index = UNITLIST[j].index;
+          UNITLIST[j].index = placeIndex;
         }else if(UNITLIST[j].init == UNITLIST[j+1].init){
           if(UNITLIST[j].dex > UNITLIST[j+1].dex){
             let place = UNITLIST[j];
             UNITLIST[j] = UNITLIST[j+1];
             UNITLIST[j+1] = place;
+            let placeIndex = UNITLIST[j].index;
+            UNITLIST[j].index = UNITLIST[j+1].index;
+            UNITLIST[j+1].index = placeIndex;
           }
         }
       }
     }
     UNITLIST.reverse();
+
+    for(let i = 0; i < this.units.length; i++){
+      UNITLIST[i].index = i+1;
+    }
   }
 
   constructor() { 
