@@ -62,6 +62,11 @@ export class AddUnitsComponent implements OnInit {
     }
   }
 
+  removeUnit(index: number){
+    UNITLIST.splice(index,1);
+    this.sortUnitsGreedy();
+  }
+
   constructor() { 
     
    }

@@ -28,7 +28,10 @@
 
         <button class="btn_submit center" (click)="sortUnitsGreedy()">Sort</button>
         
-        <li *ngFor="let unit of units">
-            {{unit.index}}. {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
+        <li *ngFor="let unit of units; let index=index">
+            <div class="row-content">
+                <button class="btn_remove" (click)="removeUnit(index)">X</button>
+                {{unit.index}}. {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
+            </div>
         </li>   
 </div>

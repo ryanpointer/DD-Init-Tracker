@@ -1,5 +1,16 @@
 /* Buttons */
 
+.btn_remove{
+
+    margin-right: 1em;
+
+    border: 1px solid red;
+
+    background-color: black;
+    color: red;
+
+}
+
 .btn_submit{
     
     margin: auto;
