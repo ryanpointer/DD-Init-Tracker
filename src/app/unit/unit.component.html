@@ -1,13 +1,12 @@
-<div class="center content"><h1>Initiative Stack</h1></div>
+<div class="center content row-content">
 
-<div class="center content">
+    <button class="btn_back" routerLink="app-add-units"><==</button>
+    <h1>Initiative Stack</h1>
 
+</div>
 
-    <li class="unit-name" *ngFor="let units of unitlist">
+<div class="center" id="trackerContainer">
 
-        <p>{{units.name}}</p>
-
-    </li>
-
+    <button (click)="iterateUnit()" class="btn_nextunit">NEXT UNIT</button>
 
 </div>

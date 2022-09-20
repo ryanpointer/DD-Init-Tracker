@@ -3,4 +3,5 @@ export interface AddUnits{
     init: number,
     dex: number;
     dexMod: number;
+    index: number;
 }
