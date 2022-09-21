@@ -6,5 +6,6 @@ export interface AddUnits{
     index: number;
     dead: boolean;
     deathSaves: number;
+    deathFails: number;
     conditions: string[];
 }

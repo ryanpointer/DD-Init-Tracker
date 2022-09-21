@@ -67,12 +67,26 @@
 
 }
 
+.btn_deathfail{
+    
+    width: 2em;
+    height: 2em;
+
+    border: 1px solid rgb(93, 75, 75);
+
+    color: white;
+    background-color: black;
+
+}.btn_deathsave:hover{
+    cursor: pointer;
+}
+
 .btn_deathsave{
     
     width: 2em;
     height: 2em;
 
-    border: 1px solid red;
+    border: 1px solid rgb(255, 255, 255);
 
     color: white;
     background-color: black;
@@ -154,6 +168,30 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+}
+
+.key{
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+
+    width: 15em;
+
+    border: 3px solid rgb(255, 255, 255);
+
+    background-color: black;
+    color: red;
+
+}.key-text{
+
+    text-align: center;
+    align-items: center;
+    font-size: 90%;
+
+    color: white;
+
 }
 
 .unit-name{

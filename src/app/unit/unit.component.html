@@ -33,9 +33,9 @@
                     <button class="btn_deathsave" id="ds3" (click)="updateStatus('ds3')"></button>
                     
                     <div class="conditions">
-                        <button class="btn_conditions blinded"></button>
-                        <button class="btn_conditions charmed"></button>
-                        <button class="btn_conditions deafened"></button>
+                        <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')"></button>
+                        <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')"></button>
+                        <button class="btn_conditions deafened" id="deafened" (click)="updateStatus('deafened')"></button>
                     </div>
                 </div>
 
@@ -43,33 +43,71 @@
 
                     <div class="death_fails_text">Fails</div>
                     
-                    <button class="btn_deathsave" id="df1" (click)="updateStatus('df1')"></button>
+                    <button class="btn_deathfail" id="df1" (click)="updateStatus('df1')"></button>
                     
-                    <button class="btn_deathsave" id="df2" (click)="updateStatus('df2')"></button>
+                    <button class="btn_deathfail" id="df2" (click)="updateStatus('df2')"></button>
                     
-                    <button class="btn_deathsave" id="df3" (click)="updateStatus('df3')"></button>
+                    <button class="btn_deathfail" id="df3" (click)="updateStatus('df3')"></button>
                     
                     <div class="conditions">
-                        <button class="btn_conditions frightened"></button>
-                        <button class="btn_conditions grappled"></button>
-                        <button class="btn_conditions invisible"></button>
+                        <button class="btn_conditions frightened" id="frightened" (click)="updateStatus('frightened')"></button>
+                        <button class="btn_conditions grappled" id="grappled" (click)="updateStatus('grappled')"></button>
+                        <button class="btn_conditions invisible" id="invisible" (click)="updateStatus('invisible')"></button>
                     </div>
                 </div>
 
                 <div class="conditions">
-                    <button class="btn_conditions paralyzed"></button>
-                    <button class="btn_conditions petrified"></button>
-                    <button class="btn_conditions poisoned"></button>
+                    <button class="btn_conditions paralyzed" id="paralyzed" (click)="updateStatus('paralyzed')"></button>
+                    <button class="btn_conditions petrified" id="petrified" (click)="updateStatus('petrified')"></button>
+                    <button class="btn_conditions poisoned" id="poisoned" (click)="updateStatus('poisoned')"></button>
                 </div>
                 <div class="conditions">
-                    <button class="btn_conditions restrained"></button>
-                    <button class="btn_conditions stunned"></button>
-                    <button class="btn_conditions unconcious"></button>
+                    <button class="btn_conditions restrained" id="restrained" (click)="updateStatus('restrained')"></button>
+                    <button class="btn_conditions stunned" id="stunned" (click)="updateStatus('stunned')"></button>
+                    <button class="btn_conditions unconcious" id="unconcious" (click)="updateStatus('unconcious')"></button>
                 </div>
 
             </div>
         </div>
 
     </div> 
+
+    <div class="key">
+
+        Conditions Key
+
+        <div class="row-content">
+
+            <button class="btn_conditions blinded"></button><p class="key-text">Blinded</p>
+            <button class="btn_conditions charmed"></button><p class="key-text">Charmed</p>
+            <button class="btn_conditions deafened"></button><p class="key-text">Deafened</p>
+
+        </div>
+
+        <div class="row-content">
+
+            <button class="btn_conditions frightened"></button><p class="key-text">Frightened</p>
+            <button class="btn_conditions grappled"></button><p class="key-text">Grappled</p>
+            <button class="btn_conditions invisible"></button><p class="key-text">Invisible</p>
+
+        </div>
+
+        <div class="row-content">
+
+            <button class="btn_conditions paralyzed"></button><p class="key-text">Paralyzed</p>
+            <button class="btn_conditions petrified"></button><p class="key-text">Petrified</p>
+            <button class="btn_conditions poisoned"></button><p class="key-text">Poisoned</p>
+
+        </div>
+
+        <div class="row-content">
+
+            <button class="btn_conditions restrained"></button><p class="key-text">Restrained</p>
+            <button class="btn_conditions stunned"></button><p class="key-text">Stunned</p>
+            <button class="btn_conditions unconcious"></button><p class="key-text">Unconcious</p>
+
+        </div>
+
+    </div>
 
 </div>

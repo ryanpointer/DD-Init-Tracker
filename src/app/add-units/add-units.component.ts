@@ -18,6 +18,7 @@ export class AddUnitsComponent implements OnInit {
 
   dead!: boolean;
   deathSaves!: number;
+  deathFails!: number;
   conditions!: string[];
 
 
@@ -30,7 +31,8 @@ export class AddUnitsComponent implements OnInit {
     UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, 
       dexMod: this.dexMod, index: this.units.length,
        dead: this.dead, deathSaves: this.deathSaves, 
-        conditions: this.conditions});
+        deathFails: this.deathFails, 
+          conditions: this.conditions});
 
     this.sortUnitsGreedy();
 
