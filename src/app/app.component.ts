@@ -19,6 +19,7 @@ export class AppComponent {
 
   dead!:boolean;
   deathSaves!:number;
+  deathFails!:number;
   conditions!:string[];
   
 
@@ -49,13 +50,15 @@ addDummyUnits(){
   this.index = 1;
   this.dead = false;
   this.deathSaves = 0;
+  this.deathFails = 0;
   this.conditions = [];
   
 
   UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
      dexMod:this.dexMod, index:this.index,
-      dead: this.dead, deathSaves: this.deathSaves, 
-        conditions: this.conditions});
+      dead: this.dead, deathSaves: this.deathSaves,
+        deathFails: this.deathFails, 
+          conditions: this.conditions});
 
   this.name = "Dummy 2";
   this.init = 3;
@@ -64,12 +67,14 @@ addDummyUnits(){
   this.index = 2;
   this.dead = false;
   this.deathSaves = 0;
+  this.deathFails = 0;
   this.conditions = [];
 
   UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
      dexMod:this.dexMod, index:this.index,
        dead: this.dead, deathSaves: this.deathSaves, 
-        conditions: this.conditions});
+        deathFails: this.deathFails,
+          conditions: this.conditions});
 
   this.name = "Dummy 3";
   this.init = 22;
@@ -78,12 +83,14 @@ addDummyUnits(){
   this.index = 3;
   this.dead = false;
   this.deathSaves = 0;
+  this.deathFails = 0;
   this.conditions = [];
 
   UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
      dexMod:this.dexMod, index:this.index,  
       dead: this.dead, deathSaves: this.deathSaves, 
-        conditions: this.conditions});
+        deathFails: this.deathFails,
+          conditions: this.conditions});
 
 }
 
