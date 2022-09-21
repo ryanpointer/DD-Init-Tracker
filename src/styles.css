@@ -46,6 +46,11 @@
     font-size: 15px;
 }
 
+.justify_right{
+    justify-content: right;
+    margin: auto;
+}
+
 .row-content{
 
     display: flex;

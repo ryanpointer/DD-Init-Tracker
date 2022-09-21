@@ -16,6 +16,10 @@ export class AppComponent {
 
   dexMod!:number;
   index!:number;
+
+  dead!:boolean;
+  deathSaves!:number;
+  conditions!:string[];
   
 
   constructor(private router: Router){}
@@ -43,24 +47,43 @@ addDummyUnits(){
   this.dex = 17;
   this.dexMod = Math.floor((this.dex - 10) / 2);
   this.index = 1;
+  this.dead = false;
+  this.deathSaves = 0;
+  this.conditions = [];
+  
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
+     dexMod:this.dexMod, index:this.index,
+      dead: this.dead, deathSaves: this.deathSaves, 
+        conditions: this.conditions});
 
   this.name = "Dummy 2";
   this.init = 3;
   this.dex = 12;
   this.dexMod = Math.floor((this.dex - 10) / 2);
   this.index = 2;
+  this.dead = false;
+  this.deathSaves = 0;
+  this.conditions = [];
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
+     dexMod:this.dexMod, index:this.index,
+       dead: this.dead, deathSaves: this.deathSaves, 
+        conditions: this.conditions});
 
   this.name = "Dummy 3";
   this.init = 22;
   this.dex = 20;
   this.dexMod = Math.floor((this.dex - 10) / 2);
   this.index = 3;
+  this.dead = false;
+  this.deathSaves = 0;
+  this.conditions = [];
 
-  UNITLIST.push({name:this.name, init:this.init, dex:this.dex, dexMod:this.dexMod, index:this.index});
+  UNITLIST.push({name:this.name, init:this.init, dex:this.dex,
+     dexMod:this.dexMod, index:this.index,  
+      dead: this.dead, deathSaves: this.deathSaves, 
+        conditions: this.conditions});
 
 }
 

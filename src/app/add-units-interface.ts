@@ -4,4 +4,7 @@ export interface AddUnits{
     dex: number;
     dexMod: number;
     index: number;
+    dead: boolean;
+    deathSaves: number;
+    conditions: string[];
 }
