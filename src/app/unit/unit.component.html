@@ -7,6 +7,69 @@
 
 <div class="center" id="trackerContainer">
 
-    <button (click)="iterateUnit()" class="btn_nextunit">NEXT UNIT</button>
+    <div class="action_panel">
+
+        <h2>Action Panel</h2>
+        <button (click)="iterateUnit()" class="btn_nextunit">NEXT UNIT</button>
+
+        <div class="row_content"> <!-- Death Status Manager -->
+            <div>
+                <div class="death_status">
+
+                    <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">0_0</button>
+                    <button class="btn_revive" id="reviveStatus" (click)="updateStatus('reviveStatus')">0v0</button>
+                    <p class="justify_right conditions_text">Conditions</p>
+
+                </div>
+
+                <div class="death_saves">
+
+                    <div class="death_saves_text">Saves</div>
+                    
+                    <button class="btn_deathsave" id="ds1" (click)="updateStatus('ds1')"></button>
+                    
+                    <button class="btn_deathsave" id="ds2" (click)="updateStatus('ds2')"></button>
+                    
+                    <button class="btn_deathsave" id="ds3" (click)="updateStatus('ds3')"></button>
+                    
+                    <div class="conditions">
+                        <button class="btn_conditions blinded"></button>
+                        <button class="btn_conditions charmed"></button>
+                        <button class="btn_conditions deafened"></button>
+                    </div>
+                </div>
+
+                <div class="death_saves">
+
+                    <div class="death_fails_text">Fails</div>
+                    
+                    <button class="btn_deathsave" id="df1" (click)="updateStatus('df1')"></button>
+                    
+                    <button class="btn_deathsave" id="df2" (click)="updateStatus('df2')"></button>
+                    
+                    <button class="btn_deathsave" id="df3" (click)="updateStatus('df3')"></button>
+                    
+                    <div class="conditions">
+                        <button class="btn_conditions frightened"></button>
+                        <button class="btn_conditions grappled"></button>
+                        <button class="btn_conditions invisible"></button>
+                    </div>
+                </div>
+
+                <div class="conditions">
+                    <button class="btn_conditions paralyzed"></button>
+                    <button class="btn_conditions petrified"></button>
+                    <button class="btn_conditions poisoned"></button>
+                </div>
+                <div class="conditions">
+                    <button class="btn_conditions restrained"></button>
+                    <button class="btn_conditions stunned"></button>
+                    <button class="btn_conditions unconcious"></button>
+                </div>
+
+            </div>
+        </div>
+
+    </div> 
 
 </div>
