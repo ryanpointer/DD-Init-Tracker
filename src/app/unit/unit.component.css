@@ -16,9 +16,74 @@
     border: 2px solid red;
 }
 
+.btn_conditions{
+
+    width: 2em;
+    height: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    border: 1px solid rgb(255, 255, 255);
+
+    color: white;
+    background-color: black;
+
+}.blinded{
+    background-color: green;
+}.charmed{
+    background-color: pink;
+}.deafened{
+    background-color: gray;
+}.frightened{
+    background-color: red;
+}.grappled{
+    background-color: brown;
+}.invisible{
+    background-color: white;
+}.paralyzed{
+    background-color: yellow;
+}.petrified{
+    background-color: rgb(57, 55, 55);
+}.poisoned{
+    background-color: purple;
+}.restrained{
+    background-color: cyan;
+}.stunned{
+    background-color: orange;
+}.unconcious{
+    background-color: black;
+}
+
+.btn_dead{
+
+    width: 2em;
+    height: 2em;
+    margin-bottom: .5em;
+
+    border: 1px solid rgb(255, 255, 255);
+
+    color: rgb(255, 0, 0);
+    background-color: black;
+
+}
+
+.btn_deathsave{
+    
+    width: 2em;
+    height: 2em;
+
+    border: 1px solid red;
+
+    color: white;
+    background-color: black;
+
+}.btn_deathsave:hover{
+    cursor: pointer;
+}
+
 .btn_nextunit{
 
-    margin-bottom: .25em;
+    margin-bottom: .3em;
 
     border: 2px solid white;
     background-color: black;
@@ -30,7 +95,66 @@
     color: white;
 }
 
+.btn_revive{
+    width: 2em;
+    height: 2em;
+    margin-bottom: .5em;
+
+    border: 1px solid rgb(255, 255, 255);
+
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
 /* Classes */
+
+.action_panel{
+    justify-content: center;
+    margin: auto;
+
+    width: 20em;
+    margin-bottom: .3em;
+    border: 3px solid rgb(255, 255, 255);
+
+    background-color: black;
+    color: red;
+}
+
+.conditions{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}.conditions_text{
+    font-size: 1em;
+    color: white;
+}
+
+.death_saves{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: auto;
+
+}.death_saves_text{
+    margin-right: .1em;
+    color: white;
+}.death_fails_text{
+    margin-right: .5em;
+    color: white;
+}
+
+.death_status{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
 
 .unit-name{
     justify-content: left;
@@ -46,12 +170,22 @@ h1{
     color: red;
 }
 
+h2{
+    font-family: 'Brush Script MT', cursive;
+
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: .3em;
+
+    color: red;
+}
+
 p{
     display: flex;
     flex-direction: row;
     flex: 5;
 
-    font-size: 1.75em;
+    font-size: 3em;
 
     color: black;
 }
