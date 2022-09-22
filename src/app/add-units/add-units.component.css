@@ -1,40 +1,30 @@
-/* Buttons */
+/* ---------------------------- Buttons ------------------------ */
 
+/* Button to remove units from array */
 .btn_remove{
-
     margin-right: 1em;
 
     border: 1px solid red;
 
     background-color: black;
     color: red;
-
 }
 
+/* Adds unit to array */
 .btn_submit{
-    
     margin: auto;
     margin-bottom: 1em;
     width: 7em;
-
 }    
 
-/* Classes */
+/* -------------------------- Classes ----------------------------- */
 
-.add-units{
-
-    width: auto;
-    margin: auto;
-
-}
-
+/* Assigns flex direction to row (column by default) */
 .row-content{
-
     flex-direction: row;
-
 }
 
-/* Elements */
+/* -------------------------- Elements ---------------------------- */
 
 h1{
     font-family: 'Brush Script MT', cursive;
@@ -42,7 +32,6 @@ h1{
 }
 
 input{
-
     margin: auto;
     margin-top: .5em;
     margin-bottom: .5em;
@@ -54,14 +43,12 @@ input{
 }
 
 label{
-
     width: 20em;
 
     color: rgb(0, 0, 0);
 }
 
 li{
-
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -70,15 +57,12 @@ li{
 
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-
 }
 
 ul{
-
     margin: auto;
 
     width: 22em;
     
     background-color: black;
-
 }

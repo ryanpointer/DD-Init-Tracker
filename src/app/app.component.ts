@@ -25,12 +25,14 @@ export class AppComponent {
 
   constructor(private router: Router){}
 
+  // starts the app on the title page
   ngOnInit(){
 
     this.router.navigate(['/app-title']);
 
   }
 
+  // checks the current route 
   hasRoute(route: string){
     return this.router.url.includes(route);
   }
@@ -41,6 +43,7 @@ displayUnitListSize(){
   listSizeContainer.innerText = "Size of Unit List : " + UNITLIST.length;
 }
 
+// creates test units for the tracker with hard-coded stats
 addDummyUnits(){
 
   this.name = "Dummy 1";
@@ -94,6 +97,7 @@ addDummyUnits(){
 
 }
 
+// displays components of the dev tool when called
 loadDevToolComponents(){
 
   this.displayUnitListSize();

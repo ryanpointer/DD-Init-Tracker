@@ -1,9 +1,11 @@
+<!-- Title -->
 <div class="center content">
 
     <h1>Add Units Here</h1>
 
 </div>
 
+<!-- Navigation Buttons -->
 <div class="center row-content">
 
     <button class="btn_nav" routerLink="app-title"> <== Frontpage </button>
@@ -11,8 +13,14 @@
 
 </div>
 
+<!-- Interactive section of this page where the user can
+    dynamically add units to the initiative array.
+    Array is currently saved to each instance of the app.
+    This will eventually be changed to be recoverable via
+    a save key or a text file. -->
 <div class="center content">
 
+        <!-- Input field -->
         <li>
             <input type="name" placeholder="Enter Name of Unit"
                 [(ngModel)]="name" ngRepeat="detail in units">
@@ -25,9 +33,8 @@
 
             <button class="btn_submit" (click)="addUnits()"> Add Unit </button>   
         </li>
-
-        <button class="btn_submit center" (click)="sortUnitsGreedy()">Sort</button>
         
+        <!-- Displays the contents of initiative array -->
         <li *ngFor="let unit of units; let index=index">
             <div class="row-content">
                 <button class="btn_remove" (click)="removeUnit(index)">X</button>
