@@ -32,6 +32,11 @@ export class AddUnitsComponent implements OnInit {
   addUnits(){
 
     this.dexMod = Math.floor((this.dex - 10) / 2);
+    this.index = 0;
+    this.dead = false;
+    this.deathSaves = 0;
+    this.deathFails = 0;
+    this.conditions = [];
     UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, 
       dexMod: this.dexMod, index: this.units.length,
        dead: this.dead, deathSaves: this.deathSaves, 
