@@ -1,7 +1,7 @@
-/* Buttons */
+/* -------------------------- Buttons ----------------------------- */
 
+/* Takes user back to title screen */
 .btn_back{
-
     align-self: center;
     justify-content: center;
 
@@ -10,14 +10,16 @@
 
     background-color: black;
     color: red;
-
 }.btn_back:hover{
     cursor: pointer;
     border: 2px solid red;
 }
 
+/* Design of the conditions button with sub-styles for
+    each condition - blinded, charmed, deafened, frightened
+    grappled, invisible, paralyzed, petrified, poisoned,
+    restrained, stunned, unconcious*/
 .btn_conditions{
-
     width: 2em;
     height: 2em;
     margin-top: 0;
@@ -27,7 +29,6 @@
 
     color: white;
     background-color: black;
-
 }.blinded{
     background-color: green;
 }.charmed{
@@ -54,8 +55,8 @@
     background-color: black;
 }
 
+/* Labels the current unit as "dead" */
 .btn_dead{
-
     width: 2em;
     height: 2em;
     margin-bottom: .5em;
@@ -64,11 +65,11 @@
 
     color: rgb(255, 0, 0);
     background-color: black;
-
 }
 
+/* Assigns the current unit either 0,1,2,3 death fails depending 
+    on which button is selected */
 .btn_deathfail{
-    
     width: 2em;
     height: 2em;
 
@@ -76,13 +77,12 @@
 
     color: white;
     background-color: black;
-
 }.btn_deathsave:hover{
     cursor: pointer;
 }
 
-.btn_deathsave{
-    
+/* Same as .btn_deathfail but for saves */
+.btn_deathsave{ 
     width: 2em;
     height: 2em;
 
@@ -90,25 +90,27 @@
 
     color: white;
     background-color: black;
-
 }.btn_deathsave:hover{
     cursor: pointer;
 }
 
+/* Iterates to the next unit in the array and displays it's
+    data */
 .btn_nextunit{
-
     margin-bottom: .3em;
 
     border: 2px solid white;
+
     background-color: black;
     color: red;
-
 }.btn_nextunit:hover{
     border: 2px solid red;
+
     background-color: black;
     color: white;
 }
 
+/* Removes the "dead" status from current unit */
 .btn_revive{
     width: 2em;
     height: 2em;
@@ -120,8 +122,10 @@
     background-color: black;
 }
 
-/* Classes */
+/* ----------------------------- Classes --------------------------- */
 
+/* Interactive panel for user to add, remove, and modify
+    each unit in the array in order */
 .action_panel{
     justify-content: center;
     margin: auto;
@@ -134,8 +138,8 @@
     color: red;
 }
 
+/* Design for the conditions section of the action panel */
 .conditions{
-
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -143,19 +147,32 @@
     margin-right: 0;
     margin-top: 0;
     margin-bottom: 0;
-
 }.conditions_text{
+    font-family: 'Brush Script MT', cursive;
+
+    margin-right: 1em;
     font-size: 1em;
-    color: white;
+
+    color: red;
+}.conditions-title{
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    font-family: 'Brush Script MT', cursive;
+
+    font-size: 1em;
+
+    color: red;
 }
 
+/* Design for the death save buttons */
 .death_saves{
-
     display: flex;
     flex-direction: row;
     justify-content: left;
     margin: auto;
-
 }.death_saves_text{
     margin-right: .1em;
     color: white;
@@ -164,14 +181,18 @@
     color: white;
 }
 
+/* Design for the death status handler in the top-left of the
+    Action Panel */
 .death_status{
     display: flex;
     flex-direction: row;
     justify-content: left;
 }
 
+/* Key section of the action panel that labels each condition 
+    button. Hopefully this deprecates with the addition
+    of descriptive images for each condition. */
 .key{
-
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -183,17 +204,18 @@
 
     background-color: black;
     color: red;
-
 }.key-text{
-
     text-align: center;
     align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+
     font-size: 90%;
 
     color: white;
-
 }
 
+/* Design for name of unit on the tracker */
 .unit-name{
     justify-content: left;
     align-items: left;
@@ -201,7 +223,7 @@
 }
 
 
-/* Elements */
+/* ------------------------------- Elements ------------------------ */
 
 h1{
     font-family: 'Brush Script MT', cursive;

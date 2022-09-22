@@ -9,6 +9,9 @@ import { UNITLIST } from '../units-list';
 export class UnitComponent implements OnInit {
 
   unitlist = UNITLIST;
+
+  // Iterater that determines which unit of the array is 
+  // considered the "current" unit
   trackedIndex: number;
 
   constructor() { 
@@ -17,13 +20,19 @@ export class UnitComponent implements OnInit {
 
   }
 
+  // Starts the unit component with the tracker pointing to
+  //  the first unit in the array
   ngOnInit(): void {
     this.trackFunc();
   }
 
   // Handles the initialization of the tracker
+  // Points to the first unit in the array
   trackFunc(){
 
+    // Iteratively displays each unit of the array by creating a new
+    // element and appending it to the div
+    // Also assigns each created element with an id for reference
     for(let i = 0; i < this.unitlist.length; i++){
       var unit = document.createElement("p");
       unit.className = "tracked_unit";
@@ -33,6 +42,7 @@ export class UnitComponent implements OnInit {
 
     }
 
+    // Updates tracker ui to show that the first unit is current
     let firstUnit = document.getElementById("unit1") as HTMLInputElement;
     firstUnit.style.borderColor = "rgb(0,255,0)";
 
@@ -40,6 +50,12 @@ export class UnitComponent implements OnInit {
     let deathSaveElement2 = document.getElementById("ds2") as HTMLInputElement;
     let deathSaveElement3 = document.getElementById("ds3") as HTMLInputElement;
 
+    deathSaveElement1.style.backgroundColor = "rgb(0,0,0)"
+    deathSaveElement2.style.backgroundColor = "rgb(0,0,0)"
+    deathSaveElement3.style.backgroundColor = "rgb(0,0,0)"
+
+    // Checks the first unit for death saves/fails and updates ui
+    // accordingly
     if(UNITLIST[0].deathSaves === 1){
 
       deathSaveElement1.style.backgroundColor = "rgb(0,0,255)"
@@ -60,6 +76,133 @@ export class UnitComponent implements OnInit {
       deathSaveElement1.style.backgroundColor = "rgb(0,0,0)"
       deathSaveElement2.style.backgroundColor = "rgb(0,0,0)"
       deathSaveElement3.style.backgroundColor = "rgb(0,0,0)"
+
+    }
+
+    let deathFailElement1 = document.getElementById("df1") as HTMLInputElement;
+    let deathFailElement2 = document.getElementById("df2") as HTMLInputElement;
+    let deathFailElement3 = document.getElementById("df3") as HTMLInputElement;
+
+    deathFailElement1.style.backgroundColor = "rgb(0,0,0)"
+    deathFailElement2.style.backgroundColor = "rgb(0,0,0)"
+    deathFailElement3.style.backgroundColor = "rgb(0,0,0)"
+
+    if(UNITLIST[0].deathFails === 1){
+
+      deathFailElement1.style.backgroundColor = "rgb(255,0,0)"
+
+    }else if(UNITLIST[0].deathFails === 2){
+
+      deathFailElement1.style.backgroundColor = "rgb(255,0,0)"
+      deathFailElement2.style.backgroundColor = "rgb(255,0,0)"
+
+    }else if(UNITLIST[0].deathFails === 3){
+
+      deathFailElement1.style.backgroundColor = "rgb(255,0,0)"
+      deathFailElement2.style.backgroundColor = "rgb(255,0,0)"
+      deathFailElement3.style.backgroundColor = "rgb(255,0,0)"
+
+    }
+
+    // Checks the first units conditions array and updates
+    // tracker ui accordingly
+    let checkArray = UNITLIST[0].conditions;
+    let blindedElement = document.getElementById('blinded') as HTMLInputElement;
+    let charmedElement = document.getElementById('charmed') as HTMLInputElement;
+    let deafenedElement = document.getElementById('deafened') as HTMLInputElement;
+    let frightenedElement = document.getElementById('frightened') as HTMLInputElement;
+    let grappledElement = document.getElementById('grappled') as HTMLInputElement;
+    let invisibleElement = document.getElementById('invisible') as HTMLInputElement;
+    let paralyzedElement = document.getElementById('paralyzed') as HTMLInputElement;
+    let petrifiedElement = document.getElementById('petrified') as HTMLInputElement;
+    let poisonedElement = document.getElementById('poisoned') as HTMLInputElement;
+    let restrainedElement = document.getElementById('restrained') as HTMLInputElement;
+    let stunnedElement = document.getElementById('stunned') as HTMLInputElement;
+    let unconciousElement = document.getElementById('unconcious') as HTMLInputElement;
+
+    blindedElement.style.borderColor = "rgb(255,255,255)";
+    charmedElement.style.borderColor = "rgb(255,255,255)";
+    deafenedElement.style.borderColor = "rgb(255,255,255)";
+    frightenedElement.style.borderColor = "rgb(255,255,255)";
+    grappledElement.style.borderColor = "rgb(255,255,255)";
+    invisibleElement.style.borderColor = "rgb(255,255,255)";
+    paralyzedElement.style.borderColor = "rgb(255,255,255)";
+    petrifiedElement.style.borderColor = "rgb(255,255,255)";
+    poisonedElement.style.borderColor = "rgb(255,255,255)";
+    restrainedElement.style.borderColor = "rgb(255,255,255)";
+    stunnedElement.style.borderColor = "rgb(255,255,255)";
+    unconciousElement.style.borderColor = "rgb(255,255,255)";
+
+    if(checkArray.includes('blinded')){
+
+      let blindedElement = document.getElementById('blinded') as HTMLInputElement;
+      blindedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('charmed')){
+
+      let charmedElement = document.getElementById('charmed') as HTMLInputElement;
+      charmedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('deafened')){
+
+      let deafenedElement = document.getElementById('deafened') as HTMLInputElement;
+      deafenedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('frightened')){
+
+      let frightenedElement = document.getElementById('frightened') as HTMLInputElement;
+      frightenedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('grappled')){
+
+      let grappledElement = document.getElementById('grappled') as HTMLInputElement;
+      grappledElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('invisible')){
+
+      let invisibleElement = document.getElementById('invisible') as HTMLInputElement;
+      invisibleElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('paralyzed')){
+
+      let paralyzedElement = document.getElementById('paralyzed') as HTMLInputElement;
+      paralyzedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('petrified')){
+
+      let petrifiedElement = document.getElementById('petrified') as HTMLInputElement;
+      petrifiedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('poisoned')){
+
+      let poisonedElement = document.getElementById('poisoned') as HTMLInputElement;
+      poisonedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('restrained')){
+
+      let restrainedElement = document.getElementById('restrained') as HTMLInputElement;
+      restrainedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('stunned')){
+
+      let stunnedElement = document.getElementById('stunned') as HTMLInputElement;
+      stunnedElement.style.borderColor = "rgb(0,0,255)";
+
+    }
+    if(checkArray.includes('unconcious')){
+
+      let unconciousElement = document.getElementById('unconcious') as HTMLInputElement;
+      unconciousElement.style.borderColor = "rgb(0,0,255)";
 
     }
 

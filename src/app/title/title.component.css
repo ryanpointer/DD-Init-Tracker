@@ -1,10 +1,13 @@
-/* Buttons */
+/* ----------------------------- Buttons -------------------------- */
 
+/* Picture in the center of the title page is a 
+    "get started" button */
 .btn-title{
     cursor: pointer;
 
-    background-color: black;
     width: 35em;
+
+    background-color: black;
 }
 .btn-title:hover{
     border: 5px solid red;
@@ -13,11 +16,11 @@
     background-color: gray;
 }
 
-/* Classes */
+/* --------------------------- Classes ----------------------------- */
 
 
 
-/* Elements */
+/* --------------------------- Elements -----------------------------*/
 
 h1{
     font-family: 'Brush Script MT', cursive;

@@ -9,6 +9,8 @@ import { UNITLIST } from '../units-list';
 })
 export class AddUnitsComponent implements OnInit {
 
+
+  // Variables outlayed in add-units-interface.ts
   name!: string;
   init!: number;
   dex!: number;
@@ -24,9 +26,11 @@ export class AddUnitsComponent implements OnInit {
 
   units = UNITLIST;
 
+  // Calculates dexterity modifier per D&D 5e ruleset and assigns 
+  // it to the current units dexMod variable.
+  // Adds unit to the UNITLIST array.
   addUnits(){
 
-    //this.units.push({ name: this.name, init: this.init, dex: this.dex });
     this.dexMod = Math.floor((this.dex - 10) / 2);
     UNITLIST.push({ name: this.name, init: this.init, dex: this.dex, 
       dexMod: this.dexMod, index: this.units.length,
@@ -34,6 +38,7 @@ export class AddUnitsComponent implements OnInit {
         deathFails: this.deathFails, 
           conditions: this.conditions});
 
+    // Dynamically sorts UNITLIST array with each addition
     this.sortUnitsGreedy();
 
   }
@@ -66,11 +71,15 @@ export class AddUnitsComponent implements OnInit {
     }
     UNITLIST.reverse();
 
+    // updates the index of each unit tp preserve the list
     for(let i = 0; i < this.units.length; i++){
       UNITLIST[i].index = i+1;
     }
   }
 
+  // removes desired unit from list and terminates its position 
+  // in the array - does not leave the removed units former index as
+  // unassigned 
   removeUnit(index: number){
     UNITLIST.splice(index,1);
     this.sortUnitsGreedy();

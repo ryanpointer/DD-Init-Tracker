@@ -1,3 +1,7 @@
+<!-- Title -->
+<!-- Note: Despite the naming convention, the tracker is not
+    actually a stack, but rather an array. The use of "Stack"
+    here is purely semantic. -->
 <div class="center content row-content">
 
     <button class="btn_back" routerLink="app-add-units"><==</button>
@@ -7,13 +11,18 @@
 
 <div class="center" id="trackerContainer">
 
+    <!-- Interactive panel which allows for the modification
+        of each units conditions and status' -->
     <div class="action_panel">
 
         <h2>Action Panel</h2>
+        <!-- Iterates to the next unit in the array and displays
+            it's data -->
         <button (click)="iterateUnit()" class="btn_nextunit">NEXT UNIT</button>
 
         <div class="row_content"> <!-- Death Status Manager -->
             <div>
+                <!-- kills or revives current unit -->
                 <div class="death_status">
 
                     <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">0_0</button>
@@ -22,6 +31,7 @@
 
                 </div>
 
+                <!-- Handles death saves of current unit -->
                 <div class="death_saves">
 
                     <div class="death_saves_text">Saves</div>
@@ -32,6 +42,8 @@
                     
                     <button class="btn_deathsave" id="ds3" (click)="updateStatus('ds3')"></button>
                     
+                    <!-- displays first three conditions inline
+                        with death saves buttons -->
                     <div class="conditions">
                         <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')"></button>
                         <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')"></button>
@@ -39,6 +51,7 @@
                     </div>
                 </div>
 
+                <!-- Handles death fails of current unit -->
                 <div class="death_saves">
 
                     <div class="death_fails_text">Fails</div>
@@ -49,6 +62,8 @@
                     
                     <button class="btn_deathfail" id="df3" (click)="updateStatus('df3')"></button>
                     
+                    <!-- displays conditions 4,5,6 inline
+                        with death fails buttons -->
                     <div class="conditions">
                         <button class="btn_conditions frightened" id="frightened" (click)="updateStatus('frightened')"></button>
                         <button class="btn_conditions grappled" id="grappled" (click)="updateStatus('grappled')"></button>
@@ -56,6 +71,7 @@
                     </div>
                 </div>
 
+                <!-- displays the last 6 conditions -->
                 <div class="conditions">
                     <button class="btn_conditions paralyzed" id="paralyzed" (click)="updateStatus('paralyzed')"></button>
                     <button class="btn_conditions petrified" id="petrified" (click)="updateStatus('petrified')"></button>
@@ -72,39 +88,39 @@
 
     </div> 
 
+    <!-- Key for user to identify each condition by color -->
     <div class="key">
 
-        Conditions Key
+        <p class="conditions-title">Conditions Key</p>
 
         <div class="row-content">
-
-            <button class="btn_conditions blinded"></button><p class="key-text">Blinded</p>
-            <button class="btn_conditions charmed"></button><p class="key-text">Charmed</p>
-            <button class="btn_conditions deafened"></button><p class="key-text">Deafened</p>
+            <p class="key-text" style="background-color: green">Blinded</p>
+            <p class="key-text" style="background-color: pink; color: black">Charmed</p>
+            <p class="key-text" style="background-color: gray">Deafened</p>
 
         </div>
 
         <div class="row-content">
 
-            <button class="btn_conditions frightened"></button><p class="key-text">Frightened</p>
-            <button class="btn_conditions grappled"></button><p class="key-text">Grappled</p>
-            <button class="btn_conditions invisible"></button><p class="key-text">Invisible</p>
+            <p class="key-text" style="background-color: red">Frightened</p>
+            <p class="key-text" style="background-color: brown">Grappled</p>
+            <p class="key-text" style="background-color: white; color: black">Invisible</p>
 
         </div>
 
         <div class="row-content">
 
-            <button class="btn_conditions paralyzed"></button><p class="key-text">Paralyzed</p>
-            <button class="btn_conditions petrified"></button><p class="key-text">Petrified</p>
-            <button class="btn_conditions poisoned"></button><p class="key-text">Poisoned</p>
+            <p class="key-text" style="background-color: yellow; color: black">Paralyzed</p>
+            <p class="key-text" style="background-color: rgb(57, 53, 53)">Petrified</p>
+            <p class="key-text" style="background-color: purple">Poisoned</p>
 
         </div>
 
         <div class="row-content">
 
-            <button class="btn_conditions restrained"></button><p class="key-text">Restrained</p>
-            <button class="btn_conditions stunned"></button><p class="key-text">Stunned</p>
-            <button class="btn_conditions unconcious"></button><p class="key-text">Unconcious</p>
+            <p class="key-text" style="background-color: cyan; color: black">Restrained</p>
+            <p class="key-text" style="background-color: orange">Stunned</p>
+            <p class="key-text" style="background-color: black; color: white">Unconcious</p>
 
         </div>
 
