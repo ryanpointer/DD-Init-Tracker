@@ -1,3 +1,83 @@
+/* -------------------------- Animations -------------------------- */
+
+.anim_death{
+    animation: animDeath 1s ease-out forwards;
+}
+@keyframes animDeath{
+    
+    0%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+
+        width: 25em;
+        height: 5em;
+
+        background-color: grey;
+        color: black;
+    }
+
+    25%{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25em;
+        height: 5em;
+    
+        background-color: rgb(244, 137, 137);
+        color: black;
+    }   
+
+    50%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25em;
+        height: 5em;
+
+        background-color: red;
+        color: black;
+    }
+
+    75%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25em;
+        height: 5em;
+
+        background-color: rgb(244, 137, 137);
+        color: black;
+    }
+
+    100%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25em;
+        height: 5em;
+
+        background-color: grey;
+        color: black;
+    }
+
+}
+
 /* --------------------------- Buttons ---------------------------- */
 
 .btn_nav{

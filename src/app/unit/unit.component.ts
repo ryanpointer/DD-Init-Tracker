@@ -405,7 +405,9 @@ export class UnitComponent implements OnInit {
 
       // Is the unit dead?
       case statusID = "deathStatus":{
-        targetUnit.style.backgroundColor = "rgb(255,0,0)";
+        // targetUnit.style.backgroundColor = "rgb(255,0,0)";
+        targetUnit.classList.add("anim_death");
+        targetUnit.innerText = UNITLIST[this.trackedIndex].name + "(dead)";
         UNITLIST[this.trackedIndex].dead = true;
         break;
       }
@@ -413,6 +415,8 @@ export class UnitComponent implements OnInit {
       // "revives" the unit and falsifies "dead" status
       case statusID = "reviveStatus":{
         targetUnit.style.backgroundColor = "rgb(128,128,128)";
+        targetUnit.classList.remove("anim_death");
+        targetUnit.innerText = UNITLIST[this.trackedIndex].name;
         UNITLIST[this.trackedIndex].dead = false;
         break;
       }

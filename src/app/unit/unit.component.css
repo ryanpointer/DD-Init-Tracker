@@ -1,3 +1,6 @@
+/* --------------------------- Animations ------------------------- */
+
+
 /* -------------------------- Buttons ----------------------------- */
 
 /* Takes user back to title screen */
@@ -20,11 +23,14 @@
     grappled, invisible, paralyzed, petrified, poisoned,
     restrained, stunned, unconcious*/
 .btn_conditions{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-top: 0;
     margin-bottom: 0;
 
+    border-radius: 50%;
     border: 1px solid rgb(255, 255, 255);
 
     color: white;
@@ -57,6 +63,8 @@
 
 /* Labels the current unit as "dead" */
 .btn_dead{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-bottom: .5em;
@@ -77,7 +85,7 @@
 
     color: white;
     background-color: black;
-}.btn_deathsave:hover{
+}.btn_deathfail:hover{
     cursor: pointer;
 }
 
@@ -97,6 +105,8 @@
 /* Iterates to the next unit in the array and displays it's
     data */
 .btn_nextunit{
+    cursor: pointer;
+
     margin-bottom: .3em;
 
     border: 2px solid white;
@@ -112,6 +122,8 @@
 
 /* Removes the "dead" status from current unit */
 .btn_revive{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-bottom: .5em;
