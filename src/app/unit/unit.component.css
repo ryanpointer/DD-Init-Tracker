@@ -35,29 +35,46 @@
 
     color: white;
     background-color: black;
+}.btn_conditions_img{
+    margin-left: -.25em;
+    margin-bottom: -.3em;
+    width: 1.5em;
+    height: 1.5em; 
 }.blinded{
+    overflow: hidden;
     background-color: green;
 }.charmed{
+    overflow: hidden;
     background-color: pink;
 }.deafened{
+    overflow: hidden;
     background-color: gray;
 }.frightened{
+    overflow: hidden;
     background-color: red;
 }.grappled{
+    overflow: hidden;
     background-color: brown;
 }.invisible{
+    overflow: hidden;
     background-color: white;
 }.paralyzed{
+    overflow: hidden;
     background-color: yellow;
 }.petrified{
+    overflow: hidden;
     background-color: rgb(57, 55, 55);
 }.poisoned{
+    overflow: hidden;
     background-color: purple;
 }.restrained{
+    overflow: hidden;
     background-color: cyan;
 }.stunned{
+    overflow: hidden;
     background-color: orange;
 }.unconcious{
+    overflow: hidden;
     background-color: black;
 }
 
@@ -73,6 +90,13 @@
 
     color: rgb(255, 0, 0);
     background-color: black;
+}.btn_dead_img{
+    display: flex;
+    align-items: left;
+    margin-left: -.25em;
+
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* Assigns the current unit either 0,1,2,3 death fails depending 
@@ -132,6 +156,13 @@
 
     color: rgb(255, 255, 255);
     background-color: black;
+}.btn_revive_img{
+    display: flex;
+    align-items: left;
+    margin-left: -.25em;
+
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* ----------------------------- Classes --------------------------- */

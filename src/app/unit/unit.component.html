@@ -25,8 +25,13 @@
                 <!-- kills or revives current unit -->
                 <div class="death_status">
 
-                    <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">0_0</button>
-                    <button class="btn_revive" id="reviveStatus" (click)="updateStatus('reviveStatus')">0v0</button>
+                    <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">
+                        <img class="btn_dead_img" src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/256x256/plain/skull.png">
+                    </button>
+
+                    <button class="btn_revive" id="reviveStatus" (click)="updateStatus('reviveStatus')">
+                        <img class="btn_revive_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/angel.png">
+                    </button>
                     <p class="justify_right conditions_text">Conditions</p>
 
                 </div>
@@ -45,9 +50,15 @@
                     <!-- displays first three conditions inline
                         with death saves buttons -->
                     <div class="conditions">
-                        <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')"></button>
-                        <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')"></button>
-                        <button class="btn_conditions deafened" id="deafened" (click)="updateStatus('deafened')"></button>
+                        <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/eye_blind.png">
+                        </button>
+                        <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/heart.png">
+                        </button>
+                        <button class="btn_conditions deafened" id="deafened" (click)="updateStatus('deafened')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/ear.png">
+                        </button>
                     </div>
                 </div>
 
@@ -75,7 +86,9 @@
                 <div class="conditions">
                     <button class="btn_conditions paralyzed" id="paralyzed" (click)="updateStatus('paralyzed')"></button>
                     <button class="btn_conditions petrified" id="petrified" (click)="updateStatus('petrified')"></button>
-                    <button class="btn_conditions poisoned" id="poisoned" (click)="updateStatus('poisoned')"></button>
+                    <button class="btn_conditions poisoned" id="poisoned" (click)="updateStatus('poisoned')">
+                        <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/poison.png">
+                    </button>
                 </div>
                 <div class="conditions">
                     <button class="btn_conditions restrained" id="restrained" (click)="updateStatus('restrained')"></button>

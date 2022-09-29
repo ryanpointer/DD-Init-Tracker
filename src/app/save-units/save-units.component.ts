@@ -18,10 +18,12 @@ export class SaveUnitsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // iterates through SAVEDUNITS array and pushes data to
+  // a txt file that can be loaded to retrieve saved units
   exportSavedUnits(){
     for(let i = 0; i < SAVEDUNITS.length; i++){
-
-    }
+      
+    } 
   }
 
   removeUnit(index: number){
