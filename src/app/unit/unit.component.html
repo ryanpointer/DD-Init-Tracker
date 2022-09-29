@@ -25,8 +25,13 @@
                 <!-- kills or revives current unit -->
                 <div class="death_status">
 
-                    <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">0_0</button>
-                    <button class="btn_revive" id="reviveStatus" (click)="updateStatus('reviveStatus')">0v0</button>
+                    <button class="btn_dead" id="deathStatus" (click)="updateStatus('deathStatus')">
+                        <img class="btn_dead_img" src="https://d1nhio0ox7pgb.cloudfront.net/_img/i_collection_png/256x256/plain/skull.png">
+                    </button>
+
+                    <button class="btn_revive" id="reviveStatus" (click)="updateStatus('reviveStatus')">
+                        <img class="btn_revive_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/angel.png">
+                    </button>
                     <p class="justify_right conditions_text">Conditions</p>
 
                 </div>
@@ -45,9 +50,15 @@
                     <!-- displays first three conditions inline
                         with death saves buttons -->
                     <div class="conditions">
-                        <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')"></button>
-                        <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')"></button>
-                        <button class="btn_conditions deafened" id="deafened" (click)="updateStatus('deafened')"></button>
+                        <button class="btn_conditions blinded" id="blinded" (click)="updateStatus('blinded')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/eye_blind.png">
+                        </button>
+                        <button class="btn_conditions charmed" id="charmed" (click)="updateStatus('charmed')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/heart.png">
+                        </button>
+                        <button class="btn_conditions deafened" id="deafened" (click)="updateStatus('deafened')">
+                            <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/ear.png">
+                        </button>
                     </div>
                 </div>
 
@@ -65,22 +76,40 @@
                     <!-- displays conditions 4,5,6 inline
                         with death fails buttons -->
                     <div class="conditions">
-                        <button class="btn_conditions frightened" id="frightened" (click)="updateStatus('frightened')"></button>
-                        <button class="btn_conditions grappled" id="grappled" (click)="updateStatus('grappled')"></button>
-                        <button class="btn_conditions invisible" id="invisible" (click)="updateStatus('invisible')"></button>
+                        <button class="btn_conditions frightened" id="frightened" (click)="updateStatus('frightened')">
+                            <img class="btn_conditions_img" src="https://image.shutterstock.com/shutterstock/photos/1266673993/display_1500/stock-vector-scared-emoji-vector-icon-sign-icon-vector-illustration-for-personal-and-commercial-use-clean-1266673993.jpg">
+                        </button>
+                        <button class="btn_conditions grappled" id="grappled" (click)="updateStatus('grappled')">
+                            <img class="btn_conditions_img" src="https://image.shutterstock.com/image-vector/judo-fighters-round-pictogram-logo-600w-2045522615.jpg">
+                        </button>
+                        <button class="btn_conditions invisible" id="invisible" (click)="updateStatus('invisible')">
+                            <img class="btn_conditions_img" src="https://image.shutterstock.com/image-vector/hacker-icons-bug-virus-crack-600w-1384424252.jpg">
+                        </button>
                     </div>
                 </div>
 
                 <!-- displays the last 6 conditions -->
                 <div class="conditions">
-                    <button class="btn_conditions paralyzed" id="paralyzed" (click)="updateStatus('paralyzed')"></button>
-                    <button class="btn_conditions petrified" id="petrified" (click)="updateStatus('petrified')"></button>
-                    <button class="btn_conditions poisoned" id="poisoned" (click)="updateStatus('poisoned')"></button>
+                    <button class="btn_conditions paralyzed" id="paralyzed" (click)="updateStatus('paralyzed')">
+                        <img class="btn_conditions_img" src="https://image.shutterstock.com/image-vector/partial-paralysis-rgb-color-icon-600w-1955821648.jpg">
+                    </button>
+                    <button class="btn_conditions petrified" id="petrified" (click)="updateStatus('petrified')">
+                        <img class="btn_conditions_img" src="https://image.shutterstock.com/image-photo/pompeii-italy-may-03-2022-600w-2185016921.jpg">
+                    </button>
+                    <button class="btn_conditions poisoned" id="poisoned" (click)="updateStatus('poisoned')">
+                        <img class="btn_conditions_img" src="https://www.iconexperience.com/_img/i_collection_png/48x48/plain/poison.png">
+                    </button>
                 </div>
                 <div class="conditions">
-                    <button class="btn_conditions restrained" id="restrained" (click)="updateStatus('restrained')"></button>
-                    <button class="btn_conditions stunned" id="stunned" (click)="updateStatus('stunned')"></button>
-                    <button class="btn_conditions unconcious" id="unconcious" (click)="updateStatus('unconcious')"></button>
+                    <button class="btn_conditions restrained" id="restrained" (click)="updateStatus('restrained')">
+                        <img class="btn_conditions_img" src="https://image.shutterstock.com/image-photo/old-vintage-sad-despair-fear-600w-2075509585.jpg">
+                    </button>
+                    <button class="btn_conditions stunned" id="stunned" (click)="updateStatus('stunned')">
+                        <img class="btn_conditions_img" src="https://image.shutterstock.com/image-vector/dazed-vector-icon-on-white-600w-2193914293.jpg">
+                    </button>
+                    <button class="btn_conditions unconcious" id="unconcious" (click)="updateStatus('unconcious')">
+                        <img class="btn_conditions_img" src="https://image.shutterstock.com/image-photo/unconcious-caucasian-athlete-faint-on-600w-1955353888.jpg">
+                    </button>
                 </div>
 
             </div>

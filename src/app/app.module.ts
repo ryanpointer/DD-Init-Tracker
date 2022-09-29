@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UnitComponent } from './unit/unit.component';
 import { TitleComponent } from './title/title.component';
 import { AddUnitsComponent } from './add-units/add-units.component';
+import { SaveUnitsComponent } from './save-units/save-units.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnitComponent,
     TitleComponent,
-    AddUnitsComponent
+    AddUnitsComponent,
+    SaveUnitsComponent
   ],
   imports: [
     BrowserModule,

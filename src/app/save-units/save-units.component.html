@@ -1,7 +1,7 @@
 <!-- Title -->
 <div class="center content">
 
-    <h1>Add Units Here</h1>
+    <h1>Save Units Here</h1>
 
 </div>
 
@@ -9,8 +9,6 @@
 <div class="center row-content">
 
     <button class="btn_nav" routerLink="app-title"> Frontpage </button>
-    <button class="btn_nav" routerLink="app-unit"> Tracking </button>
-    <button class="btn_nav" routerLink="app-save-units"> Save </button>
 
 </div>
 
@@ -26,23 +24,21 @@
             <input type="name" placeholder="Enter Name of Unit"
                 [(ngModel)]="name" ngRepeat="detail in units">
 
-            <input type="number" placeholder="Enter Initiative of Unit"
-                [(ngModel)]="init" ngRepeat="detail in units">
-
             <input type="number" placeholder="Enter Dexterity of Unit"
                 [(ngModel)]="dex" ngRepeat="detail in units">    
 
             <div class="row-content">
-                <button class="btn_submit" (click)="addUnits()"> Add Unit </button>   
-                <button class="btn_submit" (click)="loadUnits()">Load</button>
+                <button class="btn_submit" (click)="saveUnits()"> Save Unit </button>   
             </div>
         </li>
         
         <!-- Displays the contents of initiative array -->
-        <li *ngFor="let unit of units; let index=index">
+        <li *ngFor="let unit of savedUnits; let index=index">
             <div class="row-content">
                 <button class="btn_remove" (click)="removeUnit(index)">X</button>
-                {{unit.index}}. {{unit.name}} || Initiative: {{unit.init}} || Dexterity: {{unit.dex}}({{unit.dexMod}})
+                {{unit.name}} || Dexterity: {{unit.dex}}
             </div>
-        </li>   
+        </li> 
+        
+        <button class="btn_export" (click)="exportSavedUnits()">Export to Save File</button>
 </div>

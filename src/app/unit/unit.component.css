@@ -1,3 +1,6 @@
+/* --------------------------- Animations ------------------------- */
+
+
 /* -------------------------- Buttons ----------------------------- */
 
 /* Takes user back to title screen */
@@ -20,43 +23,65 @@
     grappled, invisible, paralyzed, petrified, poisoned,
     restrained, stunned, unconcious*/
 .btn_conditions{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-top: 0;
     margin-bottom: 0;
 
+    border-radius: 50%;
     border: 1px solid rgb(255, 255, 255);
 
     color: white;
     background-color: black;
+}.btn_conditions_img{
+    margin-left: -.25em;
+    margin-bottom: -.3em;
+    width: 1.5em;
+    height: 1.5em; 
 }.blinded{
+    overflow: hidden;
     background-color: green;
 }.charmed{
+    overflow: hidden;
     background-color: pink;
 }.deafened{
+    overflow: hidden;
     background-color: gray;
 }.frightened{
+    overflow: hidden;
     background-color: red;
 }.grappled{
+    overflow: hidden;
     background-color: brown;
 }.invisible{
+    overflow: hidden;
     background-color: white;
 }.paralyzed{
+    overflow: hidden;
     background-color: yellow;
 }.petrified{
+    overflow: hidden;
     background-color: rgb(57, 55, 55);
 }.poisoned{
+    overflow: hidden;
     background-color: purple;
 }.restrained{
+    overflow: hidden;
     background-color: cyan;
 }.stunned{
+    overflow: hidden;
     background-color: orange;
 }.unconcious{
+    overflow: hidden;
     background-color: black;
 }
 
 /* Labels the current unit as "dead" */
 .btn_dead{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-bottom: .5em;
@@ -65,6 +90,13 @@
 
     color: rgb(255, 0, 0);
     background-color: black;
+}.btn_dead_img{
+    display: flex;
+    align-items: left;
+    margin-left: -.25em;
+
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* Assigns the current unit either 0,1,2,3 death fails depending 
@@ -77,7 +109,7 @@
 
     color: white;
     background-color: black;
-}.btn_deathsave:hover{
+}.btn_deathfail:hover{
     cursor: pointer;
 }
 
@@ -97,6 +129,8 @@
 /* Iterates to the next unit in the array and displays it's
     data */
 .btn_nextunit{
+    cursor: pointer;
+
     margin-bottom: .3em;
 
     border: 2px solid white;
@@ -112,6 +146,8 @@
 
 /* Removes the "dead" status from current unit */
 .btn_revive{
+    cursor: pointer;
+
     width: 2em;
     height: 2em;
     margin-bottom: .5em;
@@ -120,6 +156,13 @@
 
     color: rgb(255, 255, 255);
     background-color: black;
+}.btn_revive_img{
+    display: flex;
+    align-items: left;
+    margin-left: -.25em;
+
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /* ----------------------------- Classes --------------------------- */

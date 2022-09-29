@@ -48,6 +48,11 @@ export class AddUnitsComponent implements OnInit {
 
   }
 
+  // Takes data from file and populates array
+  loadUnits(){
+
+  }
+
   // Time Complexity - O(n^2)
   // Space Complexity - O(1)
   sortUnitsGreedy(){ //bubble sort - small array of data
