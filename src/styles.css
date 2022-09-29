@@ -148,6 +148,83 @@
 
 }
 
+.anim_revive{
+    animation: animRevive 1s ease-out forwards;
+}
+@keyframes animRevive{
+
+    0%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+
+        width: 25em;
+        height: 5em;
+
+        background-color: grey;
+        color: black;
+    }
+
+    25%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25.5em;
+        height: 5.1em;
+    
+        background-color: rgb(143, 240, 126);
+        color: black;
+    }
+
+    50%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 26em;
+        height: 5.2em;
+
+        background-color: green;
+        color: black;
+    }
+
+    75%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+    
+        width: 25.5em;
+        height: 5.1em;
+    
+        background-color: rgb(143, 240, 126);
+        color: black;
+    }
+
+    100%{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: .35em;
+
+        width: 25em;
+        height: 5em;
+
+        background-color: grey;
+        color: black;
+    }
+
+}
+
 /* --------------------------- Buttons ---------------------------- */
 
 .btn_nav{
